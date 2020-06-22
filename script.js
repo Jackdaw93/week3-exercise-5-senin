@@ -6,19 +6,24 @@ let options = {
   //   },
 };
 
-let name = document.getElementById("name");
 let image = document.querySelector("img");
-let userName = document.getElementById("username");
+let name = document.getElementById("name");
+let loc = document.getElementById("location");
+let foll = document.getElementById("following");
+let follw = document.getElementById("followers");
+let pub = document.getElementById("public");
 
 async function getNameCountry() {
   try {
     let respoonse = await fetch(endpoint, options);
     let results = await respoonse.json();
-    console.log(results);
-    console.log(results);
+
     name.innerHTML = `${results.name}`;
+    loc.innerHTML = `${results.location}`;
+    foll.innerHTML = `${results.following}`;
+    follw.innerHTML = `${results.followers}`;
+    pub.innerHTML = `${results.public_repos}`;
     image.setAttribute("src", results.avatar_url);
-    userName.innerHTML = `User ID: ${results.login}`;
   } catch (error) {
     console.log(error);
   }

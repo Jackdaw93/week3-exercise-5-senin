@@ -8,6 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
       rel="stylesheet"
     />
@@ -27,38 +31,61 @@
         padding: 0;
         background-color: #ddd;
       }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 900px;
-        justify-content: center;
-      }
-      img {
-        width: 200px;
-        height: 150px;
-        padding: 20px;
-      }
-      li {
-        list-style: none;
-      }
-      p {
-        text-align: center;
-      }
-      @media screen and(max-width: 500) {
-        img {
-          width: 50px;
-          height: 20px;
-          padding: 2px;
-        }
-      }
     </style>
   </head>
   <body>
+    <nav class="navbar fix-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Blog's</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home</a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" style="padding: 20px;">
+      <div class="container text-center">
+        <img width="150px" height="150px" src="" alt="" />
+        <h1 class="display-5" id="name"></h1>
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p class="lead" id="location"></p>
+      </div>
+    </div>
     <div class="container">
-      <div>
-        <h3 id="name" text-align="center"></h3>
-        <img src="" alt="" />
-        <h3 id="username"></h3>
+      <div class="row">
+        <div class="col-md">
+          <h3>
+            Following:
+            <p id="following"></p>
+          </h3>
+        </div>
+        <div class="col-md">
+          <h3>
+            Folowers:
+            <p id="followers"></p>
+          </h3>
+        </div>
+        <div class="col-md">
+          <h3>
+            Public Repo:
+            <p id="public"></p>
+          </h3>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
